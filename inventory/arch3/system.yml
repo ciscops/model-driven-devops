@@ -21,6 +21,7 @@ all:
         server:
           hosts:
             hq-nso1:
+              cml_image_definition: "{{ nso_image }}"
               host_ip: 172.16.0.101/24
               interfaces:
                 ens4:
@@ -37,6 +38,7 @@ all:
                 192.168.0.0/16:
                   next_hop: 172.16.0.1
             hq-netbox:
+              cml_image_definition: "{{ netbox_image }}"
               host_ip: 172.16.0.102/24
               interfaces:
                 ens4:
